@@ -10,6 +10,9 @@ return [
         'HttpEnd'  => [],
         'LogLevel' => [],
         'LogWrite' => [],
+        'UserLogin' => [
+            \app\common\listener\UserLogin::class
+        ],
     ],
 
     'subscribe' => [

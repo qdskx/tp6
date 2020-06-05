@@ -4,6 +4,7 @@ declare (strict_types = 1);
 namespace app\home\controller;
 use one\One;
 use think\Request;
+use think\facade\Event;
 
 class Index
 {
@@ -20,6 +21,11 @@ class Index
         var_dump($request === $obj);
 
         var_dump(__METHOD__);
+
+        //引入事件类,触发事件
+        Event::trigger('UserLogin' , ['username' => 'admin']);
+
+        var_dump('fffffff');
 
     }
 
