@@ -4,18 +4,23 @@ declare (strict_types = 1);
 namespace app\common\controller;
 
 use think\Request;
+use app\BaseController;
+use app\middleware\AdminCheck;
+use think\facade\session;
 
-class Admin
+class Admin extends BaseController
 {
-    /**
-     * 显示资源列表
-     *
-     * @return \think\Response
-     */
-    public function index()
+    protected $middleware = [
+        \app\middleware\AdminCheck::class => [
+
+        ]
+    ];
+
+
+
+    public function initialize()
     {
-        var_dump(app('http')->getName());
-        return 'common::admin';
+
     }
 
 }

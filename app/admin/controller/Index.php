@@ -4,8 +4,9 @@ declare (strict_types = 1);
 namespace app\admin\controller;
 
 use think\Request;
+use app\common\controller\Admin;
 
-class Index
+class Index extends Admin
 {
     /**
      * 显示资源列表
@@ -14,6 +15,7 @@ class Index
      */
     public function index()
     {
+        echo 'admin:index';
         return app('http')->getName();
     }
 
