@@ -11,16 +11,21 @@ use think\facade\session;
 class Admin extends BaseController
 {
     protected $middleware = [
-        \app\middleware\AdminCheck::class => [
-
+        AdminCheck::class => [
+//            'except' => [
+//                'admin/user/login'
+//            ]
         ]
     ];
 
 
 
-    public function initialize()
+    protected function initialize()
     {
-
+//        if(!session::has('login')){
+//            echo '未登录';
+//            return redirect('admin/user/login');
+//        }
     }
 
 }

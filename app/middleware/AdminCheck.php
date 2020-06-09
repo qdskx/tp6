@@ -19,9 +19,6 @@ class AdminCheck
         echo $request->action();
         echo $request->controller();
         if(!Session::has('login')){
-            if($request->action() == 'index' && $request->controller() == 'index'){
-                return redirect('/user/login');
-            }
             return redirect('admin/user/login');
         }
 
