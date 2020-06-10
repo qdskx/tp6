@@ -19,7 +19,7 @@ class AdminCheck
         echo $request->action();
         echo $request->controller();
         if(!Session::has('login')){
-            return redirect('admin/user/login');
+            return redirect('/admin/user/login');
         }
 
         return $next($request);
