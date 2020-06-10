@@ -16,6 +16,7 @@ class User extends Admin
 
 
     public function index(){
+        view('test');
         return '用户列表';
     }
 

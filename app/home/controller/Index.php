@@ -5,6 +5,7 @@ namespace app\home\controller;
 use one\One;
 use think\Request;
 use think\facade\Event;
+use think\facade\View;
 
 class Index
 {
@@ -51,6 +52,12 @@ class Index
         $one->index();
 
 
+    }
+
+    public function five(){
+//        return View::fetch('test');
+        return View::fetch('/test1');
+//        return View::fetch('../test');
     }
 
 }

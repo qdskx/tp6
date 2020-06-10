@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title1</title>
+</head>
+<body>
+<p>看看这样我的view能用吗</p>
+</body>
+</html>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+</script>
+<script>
+    $.ajax({
+        url:'/users/sign',
+        type:'post',
+        async:true,
+        data:{'type':1},
+        dataType:'json',
+        success: function(res){
+            console.log(11111);
+        }
+    });
+
+    $.ajax({
+        url:'/users/sign',
+        type:'post',
+        async:true,
+        data:{},
+        dataType:'json',
+        success: function(res){
+            console.log(2222);
+
+        }
+    });
+
+    $.ajax({
+        url:'/users/sign',
+        type:'post',
+        async:true,
+        data:{},
+        dataType:'json',
+        success: function(res){
+            console.log(3333);
+
+        }
+    });
+</script>
